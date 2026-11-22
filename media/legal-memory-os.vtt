@@ -1,0 +1,211 @@
+WEBVTT
+
+1
+00:00:00.350 --> 00:00:02.414
+Legal Memory OS je skill,
+
+2
+00:00:02.414 --> 00:00:07.697
+který dává AI agentům advokátní kanceláře
+jednu společnou paměť.
+
+3
+00:00:07.697 --> 00:00:11.164
+Ukládá ji do trezoru Obsidian přes skript,
+
+4
+00:00:11.164 --> 00:00:15.127
+který běží jen lokálně a sám nic nikam
+neposílá.
+
+5
+00:00:16.227 --> 00:00:17.612
+Claude Code, Codex,
+
+6
+00:00:17.612 --> 00:00:22.860
+Cursor i Copilot si dosud vedly každý svou
+paměť a navzájem ji neviděly.
+
+7
+00:00:22.860 --> 00:00:26.722
+Teď všichni zapisují do jedné složky Pamet v
+trezoru.
+
+8
+00:00:27.822 --> 00:00:33.446
+Návod skillu ukládá agentům psát do paměti jen
+přes jediný skript, lmo.
+
+9
+00:00:33.446 --> 00:00:37.723
+Ten každý zápis zkontroluje dřív, než se
+cokoli uloží.
+
+10
+00:00:38.823 --> 00:00:41.010
+Ukázka se smyšleným klientem.
+
+11
+00:00:41.010 --> 00:00:43.046
+Agent založí paměť případu.
+
+12
+00:00:43.046 --> 00:00:49.156
+Klient musí v trezoru existovat a jeho název
+musí odpovídat názvu složky klienta.
+
+13
+00:00:50.256 --> 00:00:53.887
+Na začátku práce agent načte, co o věci víme.
+
+14
+00:00:53.887 --> 00:00:58.728
+Výstup ohraničují značky s náhodným kódem, aby
+agent poznal,
+
+15
+00:00:58.728 --> 00:01:00.826
+kde data začínají a končí.
+
+16
+00:01:00.826 --> 00:01:03.569
+Obsah paměti jsou data, ne pokyny.
+
+17
+00:01:04.669 --> 00:01:08.754
+Bez jména klienta skript obsah poznámek
+klientů nevydá.
+
+18
+00:01:08.754 --> 00:01:13.211
+Agent si tak při běžném hledání nenačte věci
+jiných klientů.
+
+19
+00:01:14.311 --> 00:01:16.346
+Skript odmítne skryté znaky.
+
+20
+00:01:16.346 --> 00:01:21.650
+Tento text vypadá nevinně, ale za slovem
+Protistrana je neviditelný znak.
+
+21
+00:01:21.650 --> 00:01:25.429
+Zápis se neuloží a agent dostane přesné místo
+chyby.
+
+22
+00:01:26.529 --> 00:01:30.261
+Stejně tak odmítne hesla, tokeny a rodná
+čísla.
+
+23
+00:01:30.261 --> 00:01:31.928
+Ta do paměti nepatří.
+
+24
+00:01:31.928 --> 00:01:35.104
+Osobní údaje zůstávají v kartě subjektu.
+
+25
+00:01:36.204 --> 00:01:42.440
+Neprojde ani obrázek z cizí adresy, který by
+Obsidian při otevření poznámky stáhl,
+
+26
+00:01:42.440 --> 00:01:46.395
+ani nový případ klienta, který v trezoru
+neexistuje.
+
+27
+00:01:47.495 --> 00:01:51.551
+Text z e-mailu nebo z webu agent ukládá jako
+externí.
+
+28
+00:01:51.551 --> 00:01:54.995
+Skript ho zapíše doslovně a označí jako cizí.
+
+29
+00:01:54.995 --> 00:02:01.194
+Obsidian z něj nic nevykreslí a agent dostane
+výslovné upozornění, že jde o data,
+
+30
+00:02:01.194 --> 00:02:02.112
+ne o pokyny.
+
+31
+00:02:03.212 --> 00:02:08.848
+Skript zápisy jen připojuje jako datované
+bloky s označením agenta a zdroje.
+
+32
+00:02:08.848 --> 00:02:14.040
+Nic nepřepisuje ani nemaže, takže historie
+poznámky zůstává zachovaná.
+
+33
+00:02:15.140 --> 00:02:20.663
+Na konci práce agent zapíše záznam do deníku a
+spustí kontrolu celé složky.
+
+34
+00:02:21.763 --> 00:02:25.946
+Skript nepoužívá síť a nespouští žádné jiné
+programy.
+
+35
+00:02:25.946 --> 00:02:31.312
+Hlídá to ochrana uvnitř Pythonu, která takový
+pokus okamžitě ukončí.
+
+36
+00:02:31.312 --> 00:02:33.996
+Zapisovat smí jen do složky Pamet.
+
+37
+00:02:35.096 --> 00:02:37.741
+Dvě věci ale skript ovlivnit nemůže.
+
+38
+00:02:37.741 --> 00:02:42.591
+Co si agent načte, odchází k poskytovateli
+jeho jazykového modelu.
+
+39
+00:02:42.591 --> 00:02:44.868
+A trezor synchronizuje Dropbox.
+
+40
+00:02:44.868 --> 00:02:48.102
+Proto hledání vrací jen odpovídající řádky a
+
+41
+00:02:48.102 --> 00:02:51.114
+poznámky klienta jen se zadaným klientem.
+
+42
+00:02:52.214 --> 00:02:58.725
+Při vývoji skill prošel 73 automatickými
+testy, auditem celé historie repozitáře,
+
+43
+00:02:58.725 --> 00:03:01.137
+dvěma tisíci náhodných zápisů,
+
+44
+00:03:01.137 --> 00:03:05.879
+zkouškou ve čtyřech agentech a třemi koly
+revize AI agenty.
+
+45
+00:03:06.979 --> 00:03:08.379
+Legal Memory OS.
+
+46
+00:03:08.379 --> 00:03:12.491
+Jedna paměť pro pět agentů, v trezoru
+Obsidian.
