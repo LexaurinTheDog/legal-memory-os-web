@@ -225,3 +225,4 @@ footer p { margin: 0.3rem 0; max-width: var(--measure); }
   .stack td { border: 0; padding: 0.1rem 0; white-space: normal; }
   .stack td[data-label]::before { content: attr(data-label) ": "; color: var(--graphite); }
 }
+h3.sub { margin: 2.75rem 0 0.75rem; font-size: 1.45rem; font-weight: 760; letter-spacing: -0.015em; }

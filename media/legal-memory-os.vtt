@@ -1,211 +1,280 @@
 WEBVTT
 
 1
-00:00:00.350 --> 00:00:02.414
-Legal Memory OS je skill,
+00:00:00.350 --> 00:00:03.480
+Legal Memory OS je skill pro AI agenty.
 
 2
-00:00:02.414 --> 00:00:07.697
-který dává AI agentům advokátní kanceláře
-jednu společnou paměť.
+00:00:03.480 --> 00:00:09.660
+Verze 2 přidává k paměti advokátní kanceláře
+elektronický spis, navržený tak,
 
 3
-00:00:07.697 --> 00:00:11.164
-Ukládá ji do trezoru Obsidian přes skript,
+00:00:09.660 --> 00:00:16.160
+aby ho mohly používat i soudy, státní
+zastupitelství a další orgány veřejné moci.
 
 4
-00:00:11.164 --> 00:00:15.127
-který běží jen lokálně a sám nic nikam
-neposílá.
+00:00:17.260 --> 00:00:18.779
+Skill má dvě části:
 
 5
-00:00:16.227 --> 00:00:17.612
-Claude Code, Codex,
+00:00:18.779 --> 00:00:23.976
+paměť agentů ve složce Pamet a elektronický
+spis ve složce ESpis.
 
 6
-00:00:17.612 --> 00:00:22.860
-Cursor i Copilot si dosud vedly každý svou
-paměť a navzájem ji neviděly.
+00:00:23.976 --> 00:00:30.131
+Do obou zapisuje jen skript lmo, který běží
+lokálně a sám nic nikam neposílá.
 
 7
-00:00:22.860 --> 00:00:26.722
-Teď všichni zapisují do jedné složky Pamet v
-trezoru.
+00:00:31.231 --> 00:00:37.145
+Claude Code, Codex, Cursor, Copilot i OpenCode
+zapisují do jedné paměti.
 
 8
-00:00:27.822 --> 00:00:33.446
-Návod skillu ukládá agentům psát do paměti jen
-přes jediný skript, lmo.
+00:00:37.145 --> 00:00:41.251
+Skript každý zápis zkontroluje dřív, než ho
+uloží.
 
 9
-00:00:33.446 --> 00:00:37.723
-Ten každý zápis zkontroluje dřív, než se
-cokoli uloží.
-
-10
-00:00:38.823 --> 00:00:41.010
-Ukázka se smyšleným klientem.
-
-11
-00:00:41.010 --> 00:00:43.046
-Agent založí paměť případu.
-
-12
-00:00:43.046 --> 00:00:49.156
-Klient musí v trezoru existovat a jeho název
-musí odpovídat názvu složky klienta.
-
-13
-00:00:50.256 --> 00:00:53.887
+00:00:42.351 --> 00:00:45.762
 Na začátku práce agent načte, co o věci víme.
 
+10
+00:00:45.762 --> 00:00:49.705
+Výstup ohraničují značky s náhodným kódem a
+poznámky
+
+11
+00:00:49.705 --> 00:00:53.041
+klienta skript vydá jen se zadaným klientem.
+
+12
+00:00:54.141 --> 00:00:59.086
+Skryté znaky, hesla a rodná čísla skript
+odmítne a nic nezapíše.
+
+13
+00:00:59.086 --> 00:01:01.636
+Agent dostane přesné místo chyby.
+
 14
-00:00:53.887 --> 00:00:58.728
-Výstup ohraničují značky s náhodným kódem, aby
-agent poznal,
+00:01:02.736 --> 00:01:07.625
+Text z e-mailu nebo z webu skript uloží
+doslovně jako cizí citaci.
 
 15
-00:00:58.728 --> 00:01:00.826
-kde data začínají a končí.
+00:01:07.625 --> 00:01:12.958
+Obsidian z něj nic nevykreslí a agent dostane
+upozornění, že jde o data,
 
 16
-00:01:00.826 --> 00:01:03.569
-Obsah paměti jsou data, ne pokyny.
-
-17
-00:01:04.669 --> 00:01:08.754
-Bez jména klienta skript obsah poznámek
-klientů nevydá.
-
-18
-00:01:08.754 --> 00:01:13.211
-Agent si tak při běžném hledání nenačte věci
-jiných klientů.
-
-19
-00:01:14.311 --> 00:01:16.346
-Skript odmítne skryté znaky.
-
-20
-00:01:16.346 --> 00:01:21.650
-Tento text vypadá nevinně, ale za slovem
-Protistrana je neviditelný znak.
-
-21
-00:01:21.650 --> 00:01:25.429
-Zápis se neuloží a agent dostane přesné místo
-chyby.
-
-22
-00:01:26.529 --> 00:01:30.261
-Stejně tak odmítne hesla, tokeny a rodná
-čísla.
-
-23
-00:01:30.261 --> 00:01:31.928
-Ta do paměti nepatří.
-
-24
-00:01:31.928 --> 00:01:35.104
-Osobní údaje zůstávají v kartě subjektu.
-
-25
-00:01:36.204 --> 00:01:42.440
-Neprojde ani obrázek z cizí adresy, který by
-Obsidian při otevření poznámky stáhl,
-
-26
-00:01:42.440 --> 00:01:46.395
-ani nový případ klienta, který v trezoru
-neexistuje.
-
-27
-00:01:47.495 --> 00:01:51.551
-Text z e-mailu nebo z webu agent ukládá jako
-externí.
-
-28
-00:01:51.551 --> 00:01:54.995
-Skript ho zapíše doslovně a označí jako cizí.
-
-29
-00:01:54.995 --> 00:02:01.194
-Obsidian z něj nic nevykreslí a agent dostane
-výslovné upozornění, že jde o data,
-
-30
-00:02:01.194 --> 00:02:02.112
+00:01:12.958 --> 00:01:13.847
 ne o pokyny.
 
+17
+00:01:14.947 --> 00:01:19.553
+Zápisy se jen připojují jako datované bloky s
+označením agenta.
+
+18
+00:01:19.553 --> 00:01:24.012
+Na konci práce agent zapíše deník a
+zkontroluje celou složku.
+
+19
+00:01:25.112 --> 00:01:26.800
+Teď elektronický spis.
+
+20
+00:01:26.800 --> 00:01:32.480
+Zakládá se jedním příkazem, v ukázce pro
+smyšlený Okresní soud ve Vzorově.
+
+21
+00:01:32.480 --> 00:01:35.549
+Hned se zapne i oddělení osobních údajů.
+
+22
+00:01:36.649 --> 00:01:40.520
+Osobní údaje leží ve zvláštní složce mimo
+trezor.
+
+23
+00:01:40.520 --> 00:01:44.943
+Cloudový agent běží pod účtem, který do ní
+nemá přístup.
+
+24
+00:01:44.943 --> 00:01:51.104
+Nevynucuje to jen skript, ale úložiště: disk,
+Dropbox, SharePoint nebo server.
+
+25
+00:01:52.204 --> 00:01:54.287
+Cloudový agent spis založí.
+
+26
+00:01:54.287 --> 00:01:57.141
+Údaje fyzické osoby ale zapsat nesmí.
+
+27
+00:01:57.141 --> 00:02:01.538
+Osobu jen rezervuje a dostane bezvýznamový
+identifikátor.
+
+28
+00:02:02.638 --> 00:02:05.491
+Došlou žalobu zpracuje lokální strana.
+
+29
+00:02:05.491 --> 00:02:07.744
+Pravidla rozpoznají účastníky,
+
+30
+00:02:07.744 --> 00:02:12.399
+zapíšou je do rejstříku osob a do spisu založí
+začerněný text.
+
 31
-00:02:03.212 --> 00:02:08.848
-Skript zápisy jen připojuje jako datované
-bloky s označením agenta a zdroje.
+00:02:13.499 --> 00:02:17.817
+Ve spisu pak účastníci vystupují jen pod
+identifikátorem.
 
 32
-00:02:08.848 --> 00:02:14.040
-Nic nepřepisuje ani nemaže, takže historie
-poznámky zůstává zachovaná.
+00:02:17.817 --> 00:02:20.543
+Deník spisu osobní údaje neobsahuje.
 
 33
-00:02:15.140 --> 00:02:20.663
-Na konci práce agent zapíše záznam do deníku a
-spustí kontrolu celé složky.
+00:02:21.643 --> 00:02:25.266
+Text dokumentu čte cloudový agent jen
+začerněný.
 
 34
-00:02:21.763 --> 00:02:25.946
-Skript nepoužívá síť a nespouští žádné jiné
-programy.
+00:02:25.266 --> 00:02:27.530
+Původní text mu skript nevydá.
 
 35
-00:02:25.946 --> 00:02:31.312
-Hlídá to ochrana uvnitř Pythonu, která takový
-pokus okamžitě ukončí.
+00:02:28.630 --> 00:02:31.459
+Osobní údaje se vydávají po úrovních.
 
 36
-00:02:31.312 --> 00:02:33.996
-Zapisovat smí jen do složky Pamet.
+00:02:31.459 --> 00:02:36.583
+Cloudový agent smí nejvýš doručovací údaje,
+vždy s uvedeným účelem.
 
 37
-00:02:35.096 --> 00:02:37.741
-Dvě věci ale skript ovlivnit nemůže.
+00:02:36.583 --> 00:02:38.266
+Rodné číslo nedostane.
 
 38
-00:02:37.741 --> 00:02:42.591
-Co si agent načte, odchází k poskytovateli
-jeho jazykového modelu.
+00:02:39.366 --> 00:02:42.819
+Údaje zadává a čte člověk s lokálním agentem.
 
 39
-00:02:42.591 --> 00:02:44.868
-A trezor synchronizuje Dropbox.
+00:02:42.819 --> 00:02:45.811
+Malý model běží v počítači přes Ollamu,
 
 40
-00:02:44.868 --> 00:02:48.102
-Proto hledání vrací jen odpovídající řádky a
+00:02:45.811 --> 00:02:49.571
+údaje čtou pravidla a každý zápis člověk
+potvrdí.
 
 41
-00:02:48.102 --> 00:02:51.114
-poznámky klienta jen se zadaným klientem.
+00:02:50.671 --> 00:02:55.022
+Úkony s právními účinky agent jen navrhuje:
+rozhodnutí,
 
 42
-00:02:52.214 --> 00:02:58.725
-Při vývoji skill prošel 73 automatickými
-testy, auditem celé historie repozitáře,
+00:02:55.022 --> 00:02:57.554
+lhůtu nebo vypravení písemnosti.
 
 43
-00:02:58.725 --> 00:03:01.137
-dvěma tisíci náhodných zápisů,
+00:02:57.554 --> 00:02:59.611
+Každý návrh dostane otisk.
 
 44
-00:03:01.137 --> 00:03:05.879
-zkouškou ve čtyřech agentech a třemi koly
-revize AI agenty.
+00:03:00.711 --> 00:03:02.636
+Schválit může jen člověk.
 
 45
-00:03:06.979 --> 00:03:08.379
-Legal Memory OS.
+00:03:02.636 --> 00:03:07.795
+Agent bez terminálu a bez přístupu k
+podpisovému klíči to nedokáže.
 
 46
-00:03:08.379 --> 00:03:12.491
-Jedna paměť pro pět agentů, v trezoru
+00:03:07.795 --> 00:03:10.645
+Člověk v terminálu opíše náhodný kód.
+
+47
+00:03:11.745 --> 00:03:16.414
+Místo terminálu jde schvalovat i potvrzením
+nástroje v aplikaci,
+
+48
+00:03:16.414 --> 00:03:20.281
+třeba v Claude Code, v Codexu nebo v aplikaci
+Claude.
+
+49
+00:03:20.281 --> 00:03:24.001
+V režimu YOLO se návrh schválí hned a zapíše
+se to.
+
+50
+00:03:25.101 --> 00:03:27.199
+Deník spisu je řetěz otisků.
+
+51
+00:03:27.199 --> 00:03:33.492
+Když někdo změní zápis mimo skript, kontrola
+to odhalí a výpis spisu na to upozorní.
+
+52
+00:03:34.592 --> 00:03:41.244
+Každé vložení i nahlédnutí do osobních údajů
+se zapíše do protokolu přístupů: kdo,
+
+53
+00:03:41.244 --> 00:03:42.623
+kdy, proč a komu.
+
+54
+00:03:42.623 --> 00:03:46.760
+U trestního spisu je účel povinný i pro
+nahlédnutí.
+
+55
+00:03:47.860 --> 00:03:49.663
+Záruky platí pro skript.
+
+56
+00:03:49.663 --> 00:03:53.945
+Začerňování stojí na pravidlech, ne na
+rozpoznávání jmen,
+
+57
+00:03:53.945 --> 00:03:59.955
+a co člověk sám napíše do chatu cloudového
+agenta, odchází poskytovateli modelu.
+
+58
+00:04:01.055 --> 00:04:07.181
+Verzi 2 ověřuje 137 automatických testů a
+audit celé historie repozitáře.
+
+59
+00:04:07.181 --> 00:04:11.209
+Nálezy nezávislé revize AI agenty jsou
+opravené.
+
+60
+00:04:12.309 --> 00:04:13.746
+Legal Memory OS.
+
+61
+00:04:13.746 --> 00:04:18.507
+Paměť agentů a elektronický spis, v trezoru
 Obsidian.

@@ -1,0 +1,6 @@
+{
+ "pocet": "137",
+ "testy": "Ran 137 tests in 98.247s",
+ "audit": "audit: 86 souborů/objektů, 0 nálezů",
+ "fuzz": "fuzz: 2000 pokusů, přijato 1008, s aktivním obsahem 0"
+}
